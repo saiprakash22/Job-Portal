@@ -1,0 +1,14 @@
+<table class="table table table-hover" border="3px solid black">
+        <tr>
+            <th>Job Title</th>
+            <th>Job Description</th>
+            <th>Job location</th>
+            
+        </tr>
+        <tr  ng-repeat="jobs in jobInfo">
+            <td >{{jobs.job_title}}</td>
+            <td>{{jobs.job_description}}</td>
+            <td>{{jobs.job_location}}</td>
+          
+        </tr>
+    </table>

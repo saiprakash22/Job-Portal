@@ -1,0 +1,30 @@
+<h1>Search for job</h1>`
+<form class="container">
+    <input type="text" class="form-control" ng-model="job.job_title" placeholder="title" > <br>
+    <input type="text" class="form-control" ng-model="job.keywords" placeholder="keywords" > <br>
+    <input type="text" class="form-control" ng-model="job.job_location" placeholder="location" > <br>
+   <button  class="btn btn-primary" ng-click="searchFn(job)">Search</button>
+   <button  class="btn btn-primary"ng-click="clearFn()">Clear</button>
+
+</form>
+    
+    
+<div class="container">
+<table  class="table table table-hover" border="3px solid black" style="max-width:500px">
+      
+        <tr>
+            <th>Job Title</th>
+            <th>Job Description</th>
+            <th>Job location</th>
+            
+        </tr>
+        <tr ng-repeat="search in searchResult">
+            
+            <td >{{search.job_title}}</td>
+            <td>{{search.job_description}}</td>
+            <td>{{search.job_location}}</td>
+            
+        </tr>
+       
+    </table>
+</div>
